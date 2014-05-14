@@ -4,7 +4,7 @@
      <meta charset="utf-8" />
      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
    
-     <title>  </title>
+     <title> Lab-01-A </title>
    
      <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
      <link rel="stylesheet" href="./style/semantic/css/semantic.min.css" type="text/css">  
@@ -22,39 +22,249 @@
      <script src="./style/custom/main.js"> </script> 
   </head>
   <body>
-  <header class="ui middle aligned two column raised grid segment"> 
-    <div class="row">
-      <div class="column">
-       <h1> Latex </h1>
-      </div>
-      <div class="column">
-        <img class="ui medium image floated right" src="./style/custom/logo.png"/>
-      </div> 
+  <nav class="ui fixed top pointing borderless inverted menu">
+    <header class="header item"> <a href="../index.html">Latex install</a></header>
+    <div class="right tab-menu menu">
+          <a class="item" data-tab="Lab-01-A"> Lab-01-A </a>
+          <a class="item" data-tab="01"> 01 </a>
+          <a class="item" data-tab="02"> 02 </a>
+          <a class="item" data-tab="03"> 03 </a>
+          <a class="item" data-tab="04"> 04 </a>
+          <a class="item" data-tab="05"> 05 </a>
+          <a class="item" data-tab="06"> 06 </a>
     </div>
-  </header>
+  </nav>
 
-  <div class="ui grid">
-    <section class="ui four column wide">
-    
-      <nav class="ui vertical fluid pointing menu">
-        <div class="menu">
-            <a class="item" href=" ./topic01/index.html">  Latex install </a>
-        </div>
-      </nav>
-      
-    </section>
-        
-    <section class="ui twelve column wide">
-    
-      <section class="ui stacked segment">
-        <h1>Latex</h1>
-<p>Installing LaTeX on Windows XP Professional including configuring LaTeX plugin Texlipse on Eclipse.</p>
-      </section>
-      
-    </section>
-    
-  </div> 
-  	
+  <br>
+
+	  <section data-tab="Lab-01-A" class="ui tab stacked moodle-book segment">
+	     <h1>Objectives</h1>
+<p>In this lab we describe how to </p>
+<ul>
+<li>Install <a href="http://miktex.org/">MiKTeX</a></li>
+<li>Install and configure Eclipse LaTeX plugin (Texlipse)</li>
+<li>Customise installation to generate WIT Programming slide decks</li>
+<li>Test the system by rebuilding an existing slide deck</li>
+</ul>
+	  </section>
+	  <section data-tab="01" class="ui tab stacked moodle-book segment">
+	     <h1>MikTeX Setup</h1>
+<p><strong><em>Install MikTeX via ProTeXt</em></strong> </p>
+<p>Here are the instructions to install MikTeX on a Windows XP machine</p>
+<ul>
+<li>Download ProTeXt from <a href="http://ftp.heanet.ie/pub/CTAN/tex/systems/windows/protext/">here</a></li>
+<li>Downloaded file should be <em>ProTeXt-3.1.3-060313.exe</em> or similar</li>
+<li>Extract into a temporary directory (double click)<ul>
+<li>Run <em>Setup</em> </li>
+<li>This will launch a <em>proTeXt</em> window (Figure 1)</li>
+<li>In this window are provided options to install MikTeX and TeXStudio<ul>
+<li>Do not install TeXStudio</li>
+<li>Install MikTeX (accepting defaults)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img alt="Figure 1: ProTeXt window" src="img/26.png"></p>
+	  </section>
+	  <section data-tab="02" class="ui tab stacked moodle-book segment">
+	     <h1>Eclipse</h1>
+<p><strong><em>Install Eclipse TeXlipse plugin</em></strong></p>
+<p>You can create your slide decks from witin Eclipse using the Texlipse plugin.</p>
+<p>Here are the steps necessary to install and configure Texlipse:</p>
+<ul>
+<li>Launch Eclipse</li>
+<li>Open <em>Help | Install New Software</em></li>
+<li>A window named <em>Install</em> opens (Figure 1)<ul>
+<li>Insert the path to the <em>texlipse</em> repo in the input control named <em>Work with</em>:<ul>
+<li><em>http://texlipse.sourceforge.net</em></li>
+</ul>
+</li>
+<li>Press the <em>Add</em> button</li>
+<li>This launches the <em>Add Repository</em> window (Figure 2)</li>
+<li>Type, for example, <em>TeXlipse</em> in the <em>Name</em> control</li>
+<li>The location control should show <em>http://texlipse.sourceforge.net</em></li>
+<li>Press <em>OK</em></li>
+<li>Accept defaults as you progress through the install wizard (Figure 3)</li>
+<li>You should finalize the install by relaunching Eclipse</li>
+</ul>
+</li>
+</ul>
+<p><img alt="Figure 1: Install new software to Eclipse" src="img/18.png">
+<img alt="Figure 2: Add Texlipse repository" src="img/19.png">
+<img alt="Figure 3: PDF4Eclipse &amp; Texlipse installed to Eclipse" src="img/04.png"></p>
+<p><strong><em>Configure Texlipse</em></strong></p>
+<ul>
+<li>Open <em>Windows | Preferences | Texlipse | Builder Settings</em> (Figure 4)</li>
+<li>Browse to <em>Bin directory of TeX distribution</em> (Figure 5)<ul>
+<li>All the <em>Builder Settings</em> window should be populated as shown in Figure 6</li>
+<li>Press <em>Apply</em></li>
+<li>Press <em>OK</em></li>
+</ul>
+</li>
+</ul>
+<p><img alt="Figure 4: Eclipse Preferences Texlipse Builder Settings" src="img/06.png">
+<img alt="Figure 5: Browse to bin directory of Tex distribution" src="img/07.png">
+<img alt="Figure 6: Texlipse Builder Settings configured" src="img/05.png"></p>
+	  </section>
+	  <section data-tab="03" class="ui tab stacked moodle-book segment">
+	     <h1>Create LaTeX Document</h1>
+<p><strong><em>Test drive Texlipse</em></strong></p>
+<p>Once TeXlipse has been installed and configured test the system as follows:</p>
+<ul>
+<li>Launch Eclipse</li>
+<li>Switch to the appropriate workspace</li>
+<li>
+<p>Execute <em>File | New | Other | Texlipse | LaTeX Project</em> to launch <em>LaTeX Project Wizard</em> (Figure 1)
+<img alt="Figure 1: Create LaTeX project in Eclipse" src="img/08.png"></p>
+</li>
+<li>
+<p>Press the <em>Next</em> button</p>
+</li>
+<li>In the next pane, <em>Latex Project Wizard</em>, name the project, <em>lecture01</em> and</li>
+<li>
+<p>Change the <em>Output Format</em> from the default <em>dvi</em> to <em>pdf</em> (Figure 2)</p>
+<ul>
+<li>The <em>Build commands</em> should read <em>pdflatex.exe</em>
+<img alt="Figure 2: Change output format to pdf" src="img/09.png"></li>
+</ul>
+</li>
+<li>
+<p>Scroll to <em>Beamer</em> in the <em>Templates</em> window</p>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Beamer_%28LaTeX%29">Beamer (LaTeX)</a> is a class for creating presentation slides</li>
+</ul>
+</li>
+<li>
+<p>Press <em>Next</em> to progress to the following page of the <em>LaTeX Project Wizard</em> (Figure 3)
+<img alt="Figure 3: Latex project properties " src="img/10.png"></p>
+</li>
+<li>
+<p>Change from the default name <em>document.pdf</em> to <em>lecture01.pdf</em> (Figures 4)</p>
+<ul>
+<li>We are giving the generated pdf document the same name as the project for convenience. This decision is a matter, however, for the author.
+<img alt="Figure 4: Change default document.pdf name" src="img/11.png"></li>
+</ul>
+</li>
+<li>
+<p>Press <em>Finish</em> button</p>
+</li>
+<li>A window titled <em>Open Associated Perspective</em> opens: (Figure 5)
+<img alt="Figure 5: Open Associated Perspective" src="img/12.png"><ul>
+<li>Tick <em>Remember my decision</em></li>
+<li>Press <em>Yes</em></li>
+</ul>
+</li>
+<li><em>lecture01.pdf</em> has now been generated using a <em>Beamer</em> template (Figure 6)
+<img alt="Figure 6: Default Beamer Presentation" src="img/13.png"></li>
+</ul>
+<p><strong><em>Configuring to use external pdf reader</em></strong></p>
+<p>The following configuration change makes it easy to open pdf files generated by Texlipse using an external reader such as Adobe:</p>
+<ul>
+<li>Open Eclipse Preferences</li>
+<li>Type the prompt <em>file</em> in the Preferences window (Figure 7)
+<img alt="Figure 7: Eclipse file associations" src="img/14.png"></li>
+<li>Select <em>File Associations</em></li>
+<li>
+<p>Select <strong><em>*.pdf</em></strong> in the <em>File types</em> window</p>
+<ul>
+<li>In the <em>Associated editors</em> window you should see <em>PDF Viewer</em> (Figure 8)<ul>
+<li>This is the embedded viewer that facilitates viewing pdf docs within Eclipse
+<img alt="Figure 8: Associated Editors" src="img/20.png"></li>
+</ul>
+</li>
+<li>Press the <em>Add</em> button and browse to an alternative viewer such as Adobe (Figure 9)
+<img alt="Figure 9: Selecting external pdf viewer" src="img/15.png"><ul>
+<li>Repeat for other viewers you may wish to use</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>In the <em>lecture01</em> project window select <em>lecture01.pdf</em> and right-click to open the context menu</p>
+<ul>
+<li>Select <em>PDF Viewer</em> : the document opens within Eclipse (Figure 10)
+<img alt="Figure 10: pdf opened within Eclipse using embedded viewer" src="img/16.png"></li>
+<li>Select <em>AcroRd32</em> : the document opens in the external Adobe reader (Figure 11)
+<img alt="Figure 11: pdf opened by external Adobe reader " src="img/17.png"></li>
+</ul>
+</li>
+</ul>
+<p>The project name <em>lecture01</em> and the associated document name <em>lecture01.pdf</em> have been arbitrarily chosen.</p>
+	  </section>
+	  <section data-tab="04" class="ui tab stacked moodle-book segment">
+	     <h1>Register MikTeX-local</h1>
+<p>Launch MikTeX Settings</p>
+<ul>
+<li><em>Programs | MikTeX 2.9 | Maintenance (Admin) | Settings (Admin)</em>. See Figure 1</li>
+</ul>
+<p><img alt="Figure 1: Launch MikTeX Maintenance Settings" src="img/27.png"></p>
+<ul>
+<li>
+<p>Open the Roots window by clicking on Roots tab and add <em>MikTeX-Local</em> folder. See Figure 2
+<img alt="Figure 2: Roots window" src="img/28.png"></p>
+</li>
+<li>
+<p>Press Apply button</p>
+</li>
+<li>
+<p>In the next step we shall create and populated <em>MikTeX-Local</em> folder</p>
+</li>
+</ul>
+	  </section>
+	  <section data-tab="05" class="ui tab stacked moodle-book segment">
+	     <h1>Customize LaTeX</h1>
+<p><strong><em>Customization for WIT Java Programming Lectures</em></strong></p>
+<ul>
+<li>Create a folder named <em>MikTeX-local</em> in the root of C-drive:</li>
+<li>
+<p>Expand the archive <em><a href="archives/witex.zip">witex.zip</a></em> and locate the folder and its contents in their entirety at:</p>
+</li>
+<li>
+<p><em>C:\MikTeX-Local\tex\latex</em> </p>
+<ul>
+<li>As shown in Figure 1</li>
+<li>Note that it is also necessary to create the empty folders <em>tex</em> and <em>latex</em> in the locations shown in Figure 1</li>
+</ul>
+<p><img alt="Figure 1: witex directory and contents location" src="img/22.png"></p>
+</li>
+</ul>
+<p>Open a terminal and at the command prompt and execute the command <strong>texhash</strong></p>
+<ul>
+<li>Wait until the command has fully executed which may take a few moments</li>
+<li>The purpose of executing <em>texhash</em> is to make the LaTeX installation aware of the newly added material (<em>witex</em>)</li>
+<li>See Figure 2 for typical output
+<img alt="Figure 2: run texhash" src="img/21.png"></li>
+</ul>
+	  </section>
+	  <section data-tab="06" class="ui tab stacked moodle-book segment">
+	     <h1>Test</h1>
+<p><strong><em>Import sample slide deck project</em></strong></p>
+<ul>
+<li>Expand the archive file <a href="archives/lecture_11.zip">lecture_11.zip</a></li>
+<li>Launch Eclipse<ul>
+<li>Menu command: <em>File | Import | Import Projects into Workspace</em></li>
+<li>Press the Next button
+<img alt="Figure 1: Importing latex project" src="img/23.png"></li>
+<li>In <em>Import Projects</em> window browse to the location of <em>lecture_11</em> folder<ul>
+<li>You may wish to tick <em>Copy projects into workspace</em></li>
+</ul>
+</li>
+<li>Finish
+<img alt="Figure 2: Copy project into current workspace" src="img/24.png"></li>
+</ul>
+</li>
+</ul>
+<p><strong><em>Use imported project to test the system</em></strong></p>
+<ul>
+<li>Open the project (<em>lecture_11</em>) in the Project Explorer</li>
+<li>Delete <em>lecture_11.pdf</em></li>
+<li>Open the file <em>lecture_11.tex</em> and touch the file (without making any material change)</li>
+<li>Then save the file: this forces a rebuild and regeneration of the pdf slide deck.</li>
+<li>Open the pdf using both embedded and external viewers and check it has been correctly regenerated.
+<img alt="Figure 3: Project rebuilt" src="img/25.png"></li>
+</ul>
+	  </section>
   <div class="ui fixed bottom borderless menu">'
     <div class="ui small item"> 
     <p id="footertext">
